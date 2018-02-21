@@ -34,6 +34,7 @@ public final class TrainAll {
 
     private static final Logger log = LoggerFactory.getLogger(TrainAll.class);
 
+
     public static void main(String[] args) throws Exception {
         File dir = new File(".");
         if (dir.isDirectory()) {

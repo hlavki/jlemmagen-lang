@@ -33,31 +33,36 @@ public class EnglishLemmaTest {
     public EnglishLemmaTest() {
     }
 
+
     @BeforeClass
     public static void setUpClass() {
     }
+
 
     @AfterClass
     public static void tearDownClass() {
     }
 
+
     @Before
     public void setUp() {
     }
 
+
     @After
     public void tearDown() {
     }
+
 
     @Test
     public void longEnglishText() {
         try {
             Lemmatizer lm = LemmatizerFactory.getPrebuilt("mlteast-en");
             String text = "On the other hand, inflectional paradigms, "
-                    + "or lists of inflected forms of typical words (such as sing, sang, "
-                    + "sung, sings, singing, singer, singers, song, songs, songstress, "
-                    + "songstresses in English) need to be analyzed according to criteria "
-                    + "for uncovering the underlying lexical stem.";
+                + "or lists of inflected forms of typical words (such as sing, sang, "
+                + "sung, sings, singing, singer, singers, song, songs, songstress, "
+                + "songstresses in English) need to be analyzed according to criteria "
+                + "for uncovering the underlying lexical stem.";
             String[] words = text.split("(?=[,.])|\\s+");
             for (String word : words) {
                 if (word.trim().length() > 1) {
@@ -71,6 +76,7 @@ public class EnglishLemmaTest {
             fail(e.getMessage());
         }
     }
+
 
     @Test
     public void shortEnglishText() {
